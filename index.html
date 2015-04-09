@@ -1,2 +1,79 @@
+<!doctype html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Newbury Comics</title>
+    <link rel="stylesheet" href="css/style.css" />
+  <title>Newbury Comics</title>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header>
+      
+      <nav class="navbar navbar-default">
+        <div class="navbar-collapse collapse">
+        <img src="images/newburry.jpg" class="logo">
+        <h1>Newbury Comics</h1>
+        <!--<ul>
+          <li>About Us</li>
+          <li>Search</li>
+        </ul>-->
+        </div>
+      </nav>
+      <div class="container main">
+        <div class="row">
+          <div class="col-md-12 comics">
+            <img src="images/comic.jpg" id="comicExpand"> 
+            <button>Records</button>
+            <div class="overlayComic">
+              <h2>Comics</h2>
+            </div>
+          </div>
+         <div class="row">
+          <div class="col-md-12 vid">
+            <video autoplay loop height="100%" width="100%">
+              <source src="images/vinyl.mp4" type="video/mp4"  id="recordExpand">
+            </video>
+            <button>Records</button>
+            <div class="overlayVid">
+              <h2>Records</h2>
+            </div>
+          </div>
+        </div>
 
-  <h1>Hello World</h1>
+        <div class="row">
+          <div class="col-md-12 clothing">
+            <img src="images/socks.jpg" id="clothingExpand">
+            <button>Clothing</button>
+            <div class="overlayClothes">
+              <h2>Clothing</h2>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".overlayClothes").hover(function(){
+          $("#clothingExpand").addClass("expandedClothes");
+          
+        },function(){
+          $("#clothingExpand").removeClass("expandedClothes")
+        });
+        $(".overlayComic").hover(function(){
+          $("#comicExpand").addClass("expandedComics");
+        },function(){
+          $("#comicExpand").removeClass("expandedComics")
+        });
+      });
+    </script>
+    
+  </body>
+  </html>
